@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<!-- saved from url=(0033)http://slidify.github.io/iquiz/#2 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Interactive Quiz</title>
+  
+  <meta name="description" content="Interactive Quiz">
+  <meta name="author" content="Ramnath Vaidyanathan">
+  <meta name="generator" content="slidify">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="./index_test_files/default.css" media="all">
+  <link rel="stylesheet" href="./index_test_files/phone.css" media="only screen and (max-device-width: 480px)">
+  <link rel="stylesheet" href="./index_test_files/slidify.css">
+  <link rel="stylesheet" href="./index_test_files/solarized_light.css">
+  <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="slides" src="./index_test_files/slides.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="order" src="./index_test_files/order.js"></script><script type="text/javascript" charset="utf-8" data-requirecontext="_" data-requiremodule="slide_config" src="./index_test_files/slide_config.js"></script><script type="text/javascript" charset="utf-8" data-requirecontext="_" data-requiremodule="modernizr.custom.45394" src="./index_test_files/modernizr.custom.45394.js"></script><script type="text/javascript" charset="utf-8" data-requirecontext="_" data-requiremodule="hammer" src="./index_test_files/hammer.js"></script><script type="text/javascript" charset="utf-8" data-requirecontext="_" data-requiremodule="slide-controller" src="./index_test_files/slide-controller.js"></script><script type="text/javascript" charset="utf-8" data-requirecontext="_" data-requiremodule="slide-deck" src="./index_test_files/slide-deck.js"></script><!--<base target="_blank">--><base href="." target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel="stylesheet" href="./index_test_files/bootstrap.css">
+<link rel="stylesheet" href="./index_test_files/demo.css">
+<link rel="stylesheet" href="./index_test_files/custom.css">
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="./index_test_files/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" src="./index_test_files/require-1.0.8.min.js">
+  </script>
+  
+  
+
+<link rel="stylesheet" href="./index_test_files/css"><style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Hover_Arrow {position: absolute; width: 15px; height: 11px; cursor: pointer}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 5px 0px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; -khtml-border-radius: 5px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 1px 2em; background: transparent}
+.MathJax_MenuTitle {background-color: #CCCCCC; margin: -5px 0 0 0; text-align: center; font-style: italic; font-size: 80%; color: #444444; padding: 2px 0; overflow: hidden}
+.MathJax_MenuArrow {position: absolute; right: .5em; color: #666666}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuRadioCheck {position: absolute; left: .7em}
+.MathJax_MenuLabel {padding: 1px 2em 3px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #DDDDDD; margin: 4px 3px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: #606872; color: white}
+.MathJax_Menu_Close {position: absolute; width: 31px; height: 31px; top: -15px; left: -15px}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">.MathJax_Display {text-align: center; margin: 1em 0em; position: relative; display: block; width: 100%}
+.MathJax .merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+#MathJax_Tooltip {background-color: InfoBackground; color: InfoText; border: 1px solid black; box-shadow: 2px 2px 5px #AAAAAA; -webkit-box-shadow: 2px 2px 5px #AAAAAA; -moz-box-shadow: 2px 2px 5px #AAAAAA; -khtml-box-shadow: 2px 2px 5px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true'); padding: 3px 4px; position: absolute; left: 0; top: 0; width: auto; height: auto; display: none}
+.MathJax {display: inline; font-style: normal; font-weight: normal; line-height: normal; font-size: 100%; font-size-adjust: none; text-indent: 0; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; border: 0; padding: 0; margin: 0}
+.MathJax img, .MathJax nobr, .MathJax a {border: 0; padding: 0; margin: 0; max-width: none; max-height: none; vertical-align: 0; line-height: normal; text-decoration: none}
+img.MathJax_strut {border: 0 !important; padding: 0 !important; margin: 0 !important; vertical-align: 0 !important}
+.MathJax span {display: inline; position: static; border: 0; padding: 0; margin: 0; vertical-align: 0; line-height: normal; text-decoration: none}
+.MathJax nobr {white-space: nowrap ! important}
+.MathJax img {display: inline ! important; float: none ! important}
+.MathJax_Processing {visibility: hidden; position: fixed; width: 0; height: 0; overflow: hidden}
+.MathJax_Processed {display: none!important}
+.MathJax_ExBox {display: block; overflow: hidden; width: 1px; height: 60ex}
+.MathJax .MathJax_EmBox {display: block; overflow: hidden; width: 1px; height: 60em}
+.MathJax .MathJax_HitBox {cursor: text; background: white; opacity: 0; filter: alpha(opacity=0)}
+.MathJax .MathJax_HitBox * {filter: none; opacity: 1; background: transparent}
+#MathJax_Tooltip * {filter: none; opacity: 1; background: transparent}
+@font-face {font-family: MathJax_Blank; src: url('about:blank')}
+.MathJax .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style></head>
+<body style="opacity: 0" class="loaded"><div style="visibility: hidden; overflow: hidden; position: absolute; top: 0px; height: 1px; width: auto; padding: 0px; border: 0px; margin: 0px; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal;"><div id="MathJax_Hidden"></div></div><div id="MathJax_Message" style="display: none;"></div>
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground past" data-slide-num="1" data-total-slides="8" style="">
+  <hgroup class="auto-fadein">
+    <h1>Interactive Quiz</h1>
+    <h2>Slidify</h2>
+    <p>Ramnath Vaidyanathan<br></p>
+  </hgroup>
+    <a href="https://github.com/slidify/iquiz/zipball/gh-pages" class="example">
+     Download
+    </a>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="current" id="slide-1" style="" data-slide-num="2" data-total-slides="8">
+  <hgroup>
+    <h2>Quiz</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The quiz widget allows a user to create interactive quiz questions with <a href="http://slidify.org/">Slidify</a>. It makes uses of the <a href="https://github.com/lurodrigo/jquery-quiz">jquery-quiz</a> plugin. This widget currently supports the following questions types. </p>
+
+<ol>
+<li>Radio</li>
+<li>Checkbox</li>
+<li>Multi Text</li>
+<li>Submit Compare</li>
+</ol>
+
+<div class="well">
+<p><b> Note: </b> You can hit <code>p</code> on any slide to reveal the source</p>
+</div>
+
+  </article>
+  <!-- Presenter Notes -->
+  <aside class="note" id="">
+    <section>
+      <pre><code class="parser3"><span class="xml">--- 
+
+</span><span class="comment">## Quiz</span><span class="xml">
+
+
+The quiz widget allows a user to create interactive quiz questions with [Slidify](http://slidify.org). It makes uses of the [jquery-quiz](https://github.com/lurodrigo/jquery-quiz) plugin. This widget currently supports the following questions types. 
+
+</span><span class="number">1.</span><span class="xml"> Radio
+</span><span class="number">2.</span><span class="xml"> Checkbox
+</span><span class="number">3.</span><span class="xml"> Multi Text
+</span><span class="number">4.</span><span class="xml"> Submit Compare
+
+<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">'well'</span>&gt;</span>
+<span class="tag">&lt;<span class="title">p</span>&gt;</span><span class="tag">&lt;<span class="title">b</span>&gt;</span> Note: <span class="tag">&lt;/<span class="title">b</span>&gt;</span> You can hit <span class="tag">&lt;<span class="title">code</span>&gt;</span>p<span class="tag">&lt;/<span class="title">code</span>&gt;</span> on any slide to reveal the source<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span></code></pre>
+    </section>
+  </aside>
+</slide>
+<slide class="next" id="slide-2" style="" data-slide-num="3" data-total-slides="8">
+  <hgroup>
+    <h2>Radio</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div class="quiz quiz-single well ">
+  <p>Eleanor scores 680 on the Mathematics part of the SAT. The distribution of SAT scores in a reference population is Normal, with mean 500 and standard deviation 100. Gerald takes the American College Testing (ACT) Mathematics test and scores 27. ACT scores are Normally distributed with mean 18 and standard deviation 6. Assuming that both tests measure the same kind of ability, who did better?</p>
+
+<ol>
+<li class="quiz-option quiz-answer"><input type="radio" class="quiz-radio" name="quiz-question-1-options" value="Eleanor" data-numoption="1" id="quiz-question-1-option-1"><label for="quiz-question-1-option-1">Eleanor</label></li>
+<li class="quiz-option"><input type="radio" class="quiz-radio" name="quiz-question-1-options" value="Gerald" data-numoption="2" id="quiz-question-1-option-2"><label for="quiz-question-1-option-2">Gerald</label></li>
+</ol>
+
+  <button class="quiz-submit btn btn-primary">Submit</button>
+  <button class="quiz-toggle-hint btn btn-info">Show Hint</button>
+  <button class="quiz-show-answer btn btn-success">Show Answer</button>
+  <button class="quiz-clear btn btn-danger">Clear</button>
+  
+  <div class="quiz-explanation" style="display: none;">
+  <p>The best way to compare their performance is to calculate their standardized scores.</p>
+
+<p><span class="MathJax_Preview"></span><div class="MathJax_Display" role="textbox" aria-readonly="true" style="text-align: center;"><span class="MathJax" id="MathJax-Element-1-Frame" style=""><nobr><span class="math" id="MathJax-Span-1"><span style="display: inline-block; position: relative; width: 9.389em; height: 0px; font-size: 124%;"><span style="position: absolute; clip: rect(1.018em, 1000em, 3.428em, -0.52em); top: -2.555em; left: 0em;"><span class="mrow" id="MathJax-Span-2"><span class="msubsup" id="MathJax-Span-3"><span style="display: inline-block; position: relative; width: 0.939em; height: 0px;"><span style="position: absolute; clip: rect(1.954em, 1000em, 2.809em, -0.52em); top: -2.555em; left: 0em;"><span class="mi" id="MathJax-Span-4" style="font-family: STIXGeneral-Italic;">z</span><span style="display: inline-block; width: 0px; height: 2.555em;"></span></span><span style="position: absolute; top: -2.29em; left: 0.403em;"><span class="mi" id="MathJax-Span-5" style="font-size: 70.7%; font-family: STIXGeneral-Italic;">E<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.016em;"></span></span><span style="display: inline-block; width: 0px; height: 2.44em;"></span></span></span></span><span class="mo" id="MathJax-Span-6" style="font-family: STIXGeneral-Regular; padding-left: 0.313em;">=</span><span class="mfrac" id="MathJax-Span-7" style="padding-left: 0.432em; padding-right: 0.12em;"><span style="display: inline-block; position: relative; width: 4.325em; height: 0px;"><span style="position: absolute; clip: rect(1.694em, 1000em, 2.742em, -0.484em); top: -3.232em; left: 50%; margin-left: -2.103em;"><span class="mrow" id="MathJax-Span-8"><span class="mn" id="MathJax-Span-9" style="font-family: STIXGeneral-Regular;">680</span><span class="mo" id="MathJax-Span-10" style="font-family: STIXGeneral-Regular; padding-left: 0.25em;">−</span><span class="mn" id="MathJax-Span-11" style="font-family: STIXGeneral-Regular; padding-left: 0.25em;">500</span></span><span style="display: inline-block; width: 0px; height: 2.555em;"></span></span><span style="position: absolute; clip: rect(1.706em, 1000em, 2.742em, -0.407em); top: -1.869em; left: 50%; margin-left: -0.749em;"><span class="mn" id="MathJax-Span-12" style="font-family: STIXGeneral-Regular;">100</span><span style="display: inline-block; width: 0px; height: 2.555em;"></span></span><span style="position: absolute; clip: rect(0.827em, 1000em, 1.245em, -0.518em); top: -1.292em; left: 0em;"><span style="border-left: 4.325em solid; display: inline-block; overflow: hidden; width: 0px; height: 1.25px; vertical-align: 0em;"></span><span style="display: inline-block; width: 0px; height: 1.072em;"></span></span></span></span><span class="mo" id="MathJax-Span-13" style="font-family: STIXGeneral-Regular; padding-left: 0.313em;">=</span><span class="mn" id="MathJax-Span-14" style="font-family: STIXGeneral-Regular; padding-left: 0.313em;">1.8</span></span><span style="display: inline-block; width: 0px; height: 2.555em;"></span></span></span><span style="border-left: 0em solid; display: inline-block; overflow: hidden; width: 0px; height: 2.703em; vertical-align: -0.939em;"></span></span></nobr></span></div><script type="math/tex; mode=display" id="MathJax-Element-1">z_E = \frac{680 - 500}{100} = 1.8</script>
+<span class="MathJax_Preview"></span><div class="MathJax_Display" role="textbox" aria-readonly="true" style="text-align: center;"><span class="MathJax" id="MathJax-Element-2-Frame" style=""><nobr><span class="math" id="MathJax-Span-15"><span style="display: inline-block; position: relative; width: 8.41em; height: 0px; font-size: 124%;"><span style="position: absolute; clip: rect(1.03em, 1000em, 3.428em, -0.52em); top: -2.555em; left: 0em;"><span class="mrow" id="MathJax-Span-16"><span class="msubsup" id="MathJax-Span-17"><span style="display: inline-block; position: relative; width: 0.997em; height: 0px;"><span style="position: absolute; clip: rect(1.954em, 1000em, 2.809em, -0.52em); top: -2.555em; left: 0em;"><span class="mi" id="MathJax-Span-18" style="font-family: STIXGeneral-Italic;">z</span><span style="display: inline-block; width: 0px; height: 2.555em;"></span></span><span style="position: absolute; top: -2.29em; left: 0.403em;"><span class="mi" id="MathJax-Span-19" style="font-size: 70.7%; font-family: STIXGeneral-Italic;">G</span><span style="display: inline-block; width: 0px; height: 2.44em;"></span></span></span></span><span class="mo" id="MathJax-Span-20" style="font-family: STIXGeneral-Regular; padding-left: 0.313em;">=</span><span class="mfrac" id="MathJax-Span-21" style="padding-left: 0.432em; padding-right: 0.12em;"><span style="display: inline-block; position: relative; width: 3.288em; height: 0px;"><span style="position: absolute; clip: rect(1.706em, 1000em, 2.742em, -0.489em); top: -3.232em; left: 50%; margin-left: -1.584em;"><span class="mrow" id="MathJax-Span-22"><span class="mn" id="MathJax-Span-23" style="font-family: STIXGeneral-Regular;">27</span><span class="mo" id="MathJax-Span-24" style="font-family: STIXGeneral-Regular; padding-left: 0.25em;">−</span><span class="mn" id="MathJax-Span-25" style="font-family: STIXGeneral-Regular; padding-left: 0.25em;">18</span></span><span style="display: inline-block; width: 0px; height: 2.555em;"></span></span><span style="position: absolute; clip: rect(1.698em, 1000em, 2.742em, -0.484em); top: -1.869em; left: 50%; margin-left: -0.259em;"><span class="mn" id="MathJax-Span-26" style="font-family: STIXGeneral-Regular;">6</span><span style="display: inline-block; width: 0px; height: 2.555em;"></span></span><span style="position: absolute; clip: rect(0.827em, 1000em, 1.245em, -0.518em); top: -1.292em; left: 0em;"><span style="border-left: 3.288em solid; display: inline-block; overflow: hidden; width: 0px; height: 1.25px; vertical-align: 0em;"></span><span style="display: inline-block; width: 0px; height: 1.072em;"></span></span></span></span><span class="mo" id="MathJax-Span-27" style="font-family: STIXGeneral-Regular; padding-left: 0.313em;">=</span><span class="mn" id="MathJax-Span-28" style="font-family: STIXGeneral-Regular; padding-left: 0.313em;">1.5</span></span><span style="display: inline-block; width: 0px; height: 2.555em;"></span></span></span><span style="border-left: 0em solid; display: inline-block; overflow: hidden; width: 0px; height: 2.688em; vertical-align: -0.939em;"></span></span></nobr></span></div><script type="math/tex; mode=display" id="MathJax-Element-2">z_G = \frac{27 - 18}{6} = 1.5</script></p>
+
+<p>Since, Eleanor has a higher standardized score, we can conclude that Eleanor did better!</p>
+
+</div>
+</div>
+  </article>
+  <!-- Presenter Notes -->
+  <aside class="note" id="">
+    <section>
+      <pre><code class="coffeescript">---  &amp;radio
+
+<span class="comment">## Radio</span>
+
+Eleanor scores <span class="number">680</span> <span class="literal">on</span> the Mathematics part <span class="keyword">of</span> the SAT. The distribution <span class="keyword">of</span> SAT scores <span class="keyword">in</span> a reference population <span class="keyword">is</span> Normal, <span class="reserved">with</span> mean <span class="number">500</span> <span class="keyword">and</span> standard deviation <span class="number">100.</span> Gerald takes the American College Testing (ACT) Mathematics test <span class="keyword">and</span> scores <span class="number">27.</span> ACT scores are Normally distributed <span class="reserved">with</span> mean <span class="number">18</span> <span class="keyword">and</span> standard deviation <span class="number">6.</span> Assuming that both tests measure the same kind <span class="keyword">of</span> ability, who did better?
+
+<span class="number">1.</span> _Eleanor_
+<span class="number">2.</span> Gerald
+
+*** .explanation
+
+The best way to compare their performance <span class="keyword">is</span> to calculate their standardized scores.
+
+$$z_E = \frac{<span class="number">680</span> - <span class="number">500</span>}{<span class="number">100</span>} = `<span class="javascript">r (<span class="number">680</span> - <span class="number">500</span>)/<span class="number">100</span></span>`$$
+$$z_G = \frac{<span class="number">27</span> - <span class="number">18</span>}{<span class="number">6</span>} = `<span class="javascript">r (<span class="number">27</span> - <span class="number">18</span>)/<span class="number">6</span></span>`$$
+
+Since, Eleanor has a higher standardized score, we can conclude that Eleanor did better!</code></pre>
+    </section>
+  </aside>
+</slide>
+<slide class="far-next" id="slide-3" style="" data-slide-num="4" data-total-slides="8">
+  <hgroup>
+    <h2>Radio (Two Column)</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div class="row-fluid">
+  <div class="span6">
+    <p><img src="./index_test_files/linear1.gif"></p>
+
+  </div>
+  <div class="span6">
+    <div class="quiz quiz-single well new">
+      <p>Which of these two scatterplots have a higher correlation?</p>
+
+<ol>
+<li class="quiz-option"><input type="radio" class="quiz-radio" name="quiz-question-2-options" value="A" data-numoption="1" id="quiz-question-2-option-1"><label for="quiz-question-2-option-1">A</label></li>
+<li class="quiz-option"><input type="radio" class="quiz-radio" name="quiz-question-2-options" value="B" data-numoption="2" id="quiz-question-2-option-2"><label for="quiz-question-2-option-2">B</label></li>
+</ol>
+
+      <button class="quiz-submit btn btn-primary">Submit</button>
+      <button class="quiz-toggle-hint btn btn-info">Show Hint</button>
+      <button class="quiz-show-answer btn btn-success">Show Answer</button>
+      <button class="quiz-clear btn btn-danger">Clear</button>
+      
+      <div class="quiz-explanation" style="display: none;">
+  <p>Both have the same correlation.</p>
+
+</div>
+    </div>
+  </div>
+</div>
+  </article>
+  <!-- Presenter Notes -->
+  <aside class="note" id="">
+    <section>
+      <pre><code class="markdown"><span class="horizontal_rule">---   &amp;radio2</span>
+
+<span class="header">## Radio (Two Column)</span>
+
+Which of these two scatterplots have a higher correlation?
+
+<span class="bullet">1. </span>A
+<span class="bullet">2. </span>B
+
+<span class="emphasis">***</span> =image
+
+<span class="xml"><span class="tag">&lt;<span class="title">img</span> <span class="attribute">src</span>=<span class="value">https:</span>//<span class="attribute">oli.cmu.edu</span>/<span class="attribute">repository</span>/<span class="attribute">webcontent</span>/<span class="attribute">470835bf80020ca60018d5a6c359d34c</span>/<span class="attribute">_u2_summarizing_data</span>/<span class="attribute">_m2_examining_relationships</span>/<span class="attribute">webcontent</span>/<span class="attribute">linear1.gif</span>&gt;</span></span>
+
+<span class="emphasis">***</span> .explanation
+
+Both have the same correlation.</code></pre>
+    </section>
+  </aside>
+</slide>
+<slide class="" id="slide-4" style="" data-slide-num="5" data-total-slides="8">
+  <hgroup>
+    <h2>Checkbox</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div class="quiz quiz-multiple well" data-individual="">
+  <p>Linda is 31 years old, single, outspoken, and very bright. She majored in philosophy. As a student, she was deeply concerned with issues of discrimination and social justice, and also participated in anti-nuclear demonstrations.</p>
+
+<p>Which is more probable?</p>
+
+<ol>
+<li class="quiz-option quiz-answer"><input type="checkbox" class="quiz-checkbox" id="quiz-question-3-option-1"><label for="quiz-question-3-option-1">Linda is a bank teller.</label></li>
+<li class="quiz-option"><input type="checkbox" class="quiz-checkbox" id="quiz-question-3-option-2"><label for="quiz-question-3-option-2">Linda is a bank teller and is active in the feminist movement.</label></li>
+</ol>
+
+  <button class="quiz-submit btn btn-primary">Submit</button>
+  <button class="quiz-toggle-hint btn btn-info">Show Hint</button>
+  <button class="quiz-show-answer btn btn-success">Show Answer</button>
+  <button class="quiz-clear btn btn-danger">Clear</button>
+  
+  <div class="quiz-hint" style="display: none;">
+  <p>Think about the probabilities of each event, and that of both of them together.</p>
+
+</div>
+<div class="quiz-explanation" style="display: none;">
+  <p>If you chose (2), stop back and think. Suppose we denote the event of Linda being a teller by A and the event she is active in the feminist movement by B, then probabilities in question can be written as.</p>
+
+<ul>
+<li>P(A)</li>
+<li><span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-3-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-29"><span style="display: inline-block; position: relative; width: 3.629em; height: 0px; font-size: 124%;"><span style="position: absolute; clip: rect(1.706em, 1000em, 2.905em, -0.518em); top: -2.555em; left: 0em;"><span class="mrow" id="MathJax-Span-30"><span class="mi" id="MathJax-Span-31" style="font-family: STIXGeneral-Italic;">P</span><span class="mo" id="MathJax-Span-32" style="font-family: STIXGeneral-Regular;">(</span><span class="mi" id="MathJax-Span-33" style="font-family: STIXGeneral-Italic;">A</span><span class="mo" id="MathJax-Span-34" style="font-family: STIXGeneral-Regular; padding-left: 0.25em;">∩</span><span class="mi" id="MathJax-Span-35" style="font-family: STIXGeneral-Italic; padding-left: 0.25em;">B</span><span class="mo" id="MathJax-Span-36" style="font-family: STIXGeneral-Regular;">)</span></span><span style="display: inline-block; width: 0px; height: 2.555em;"></span></span></span><span style="border-left: 0em solid; display: inline-block; overflow: hidden; width: 0px; height: 1.201em; vertical-align: -0.291em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-3">P(A \cap B)</script></li>
+</ul>
+
+<p>This is called the <a href="http://en.wikipedia.org/wiki/Conjunction_fallacy">conjugacy fallacy</a> that occurs when it is assumed that specific conditions are more probable than a single general one.</p>
+
+</div>
+</div>
+  </article>
+  <!-- Presenter Notes -->
+  <aside class="note" id="">
+    <section>
+      <pre><code class="coffeescript">---  &amp;checkbox
+
+<span class="comment">## Checkbox</span>
+
+Linda <span class="keyword">is</span> <span class="number">31</span> years old, single, outspoken, <span class="keyword">and</span> very bright. She majored <span class="keyword">in</span> philosophy. As a student, she was deeply concerned <span class="reserved">with</span> issues <span class="keyword">of</span> discrimination <span class="keyword">and</span> social justice, <span class="keyword">and</span> also participated <span class="keyword">in</span> anti-nuclear demonstrations.
+
+Which <span class="keyword">is</span> more probable?
+
+<span class="number">1.</span> _Linda <span class="keyword">is</span> a bank teller._
+<span class="number">2.</span> Linda <span class="keyword">is</span> a bank teller <span class="keyword">and</span> <span class="keyword">is</span> active <span class="keyword">in</span> the feminist movement.
+
+*** .hint
+
+Think about the probabilities <span class="keyword">of</span> each event, <span class="keyword">and</span> that <span class="keyword">of</span> both <span class="keyword">of</span> them together.
+
+*** .explanation
+
+If you chose (<span class="number">2</span>), stop back <span class="keyword">and</span> think. Suppose we denote the event <span class="keyword">of</span> Linda being a teller <span class="keyword">by</span> A <span class="keyword">and</span> the event she <span class="keyword">is</span> active <span class="keyword">in</span> the feminist movement <span class="keyword">by</span> B, then probabilities <span class="keyword">in</span> question can be written as.
+
+- P(A)
+- $P(A \cap B)$
+
+This <span class="keyword">is</span> called the [conjugacy fallacy](http://en.wikipedia.org/wiki/Conjunction_fallacy) that occurs <span class="keyword">when</span> it <span class="keyword">is</span> assumed that specific conditions are more probable than a single general one.</code></pre>
+    </section>
+  </aside>
+</slide>
+<slide class="" id="slide-5" style="" data-slide-num="6" data-total-slides="8">
+  <hgroup>
+    <h2>Multi Text</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div class="quiz-text quiz-multitext well">
+  <p>The length of human pregnancies from conception to birth varies according to a distribution that is approximately Normal with mean 266 days and standard deviation 16 days.</p>
+
+<ol>
+<li>What percent of pregnancies last fewer than 240 days?<br><input type="text" class="quiz-answerbox" data-answer="5.2081"><span class="status"> </span></li>
+<li>What percent of pregnancies last between 240 and 270 days?<br><input type="text" class="quiz-answerbox" data-answer="54.6625"><span class="status"> </span></li>
+<li>How long do the longest 25% pregnancies last?<br><input type="text" class="quiz-answerbox" data-answer="276.7918"><span class="status"> </span></li>
+</ol>
+
+  <button class="quiz-submit btn btn-primary">Submit</button>
+  <button class="quiz-toggle-hint btn btn-info">Show Hint</button>
+  <button class="quiz-show-answer btn btn-success">Show Answer</button>
+  <button class="quiz-clear btn btn-danger">Clear</button>
+  
+  <div class="quiz-explanation" style="display: none;">
+  <ol>
+<li><span class="answer">5.2081</span></li>
+<li><span class="answer">54.6625</span></li>
+<li><span class="answer">276.7918</span></li>
+</ol>
+
+</div>
+<div class="quiz-hint" style="display: none;">
+  <p>This is a hint</p>
+
+</div>
+</div>
+  </article>
+  <!-- Presenter Notes -->
+  <aside class="note" id="">
+    <section>
+      <pre><code class="parser3"><span class="xml">---  &amp;multitext
+
+</span><span class="comment">## Multi Text</span><span class="xml">
+
+The length of human pregnancies from conception to birth varies according to a distribution that is approximately Normal with mean </span><span class="number">266</span><span class="xml"> days and standard deviation </span><span class="number">16</span><span class="xml"> days.
+
+</span><span class="number">1.</span><span class="xml"> What percent of pregnancies last fewer than </span><span class="number">240</span><span class="xml"> days?
+</span><span class="number">2.</span><span class="xml"> What percent of pregnancies last between </span><span class="number">240</span><span class="xml"> and </span><span class="number">270</span><span class="xml"> days?
+</span><span class="number">3.</span><span class="xml"> How long do the longest </span><span class="number">25</span><span class="xml">% pregnancies last?
+
+*** .explanation
+
+</span><span class="number">1.</span><span class="xml"> <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">'answer'</span>&gt;</span>`r pnorm(</span><span class="number">240</span><span class="xml">, </span><span class="number">266</span><span class="xml">, </span><span class="number">16</span><span class="xml">)*</span><span class="number">100</span><span class="xml">`<span class="tag">&lt;/<span class="title">span</span>&gt;</span>
+</span><span class="number">2.</span><span class="xml"> <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">'answer'</span>&gt;</span>`r (pnorm(</span><span class="number">270</span><span class="xml">, </span><span class="number">266</span><span class="xml">, </span><span class="number">16</span><span class="xml">) - pnorm(</span><span class="number">240</span><span class="xml">, </span><span class="number">266</span><span class="xml">, </span><span class="number">16</span><span class="xml">))*</span><span class="number">100</span><span class="xml">`<span class="tag">&lt;/<span class="title">span</span>&gt;</span>
+</span><span class="number">3.</span><span class="xml"> <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">'answer'</span>&gt;</span>`r qnorm(</span><span class="number">0.25</span><span class="xml">, </span><span class="number">266</span><span class="xml">, </span><span class="number">16</span><span class="xml">, lower.tail = F)`<span class="tag">&lt;/<span class="title">span</span>&gt;</span>
+
+*** .hint
+
+This is a hint</span></code></pre>
+    </section>
+  </aside>
+</slide>
+<slide class="" id="slide-6" style="" data-slide-num="7" data-total-slides="8">
+  <hgroup>
+    <h2>Submit and Compare</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<p>What is the sample space for this experiment?</p>
+
+
+<text-checker-element></text-checker-element><textarea rows="" style="width:95%" class="submitCompare" placeholder="Type your answer (at least 140 characters)" data-attached-text-checker-element="true"></textarea>
+<a class="btn btn-success submitCompare">
+  Submit and Compare
+</a>
+<a class="btn btn-danger clearSubmitCompare">Clear</a>
+
+<div class="explanation" style="display: none;">
+  <p>The sample space for this experiment is</p>
+
+<p>{HH, HT, TH, HH}</p>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+  <aside class="note" id="">
+    <section>
+      <pre><code class="coffeescript">---  &amp;submitcompare1
+
+<span class="comment">## Submit and Compare</span>
+
+What <span class="keyword">is</span> the sample space <span class="keyword">for</span> <span class="keyword">this</span> experiment?
+
+*** .explanation
+
+The sample space <span class="keyword">for</span> <span class="keyword">this</span> experiment <span class="keyword">is</span>
+
+{HH, HT, TH, HH}</code></pre>
+    </section>
+  </aside>
+</slide>
+<slide class="" id="slide-7" style="" data-slide-num="8" data-total-slides="8">
+  <hgroup>
+    <h2>Submit and Compare (2 Column)</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div class="row-fluid">
+  <div class="span6">
+    <p>The solid curve represents the distribution of heights of all males in the US. The dotted curve represents the distribution of heights reported by males on OkCupid, an online dating website.</p>
+
+<p><img class="center" src="./index_test_files/MaleHeightDistribution.png" width="400px"></p>
+
+  </div>
+  <div class="span6">
+    <p>What is happening here?</p>
+
+    <text-checker-element></text-checker-element><textarea rows="5" style="width:95%" class="submitCompare" placeholder="Type your answer (at least 140 characters)" data-attached-text-checker-element="true"></textarea>
+    <a class="btn btn-success submitCompare" data-title="">
+      Submit and Compare
+    </a>
+    <a class="btn btn-danger clearSubmitCompare">Clear</a>
+    <div class="explanation" style="display:none;">
+      <p>It is easier to interpret things if we overlay a fitted normal distribution for the heights reported by males on OkCupid. Looking at the graph carefully, we can observe two things.</p>
+
+<p><img class="center" src="./index_test_files/MaleHeightDistributionYoink.png" width="400px"></p>
+
+<ol>
+<li>Males on OkCupid probably tend to inflate their heights!</li>
+<li>You can also see a more subtle vanity at work: starting at roughly 5' 8", the top of the dotted curve tilts even further rightward. This means that guys as they get closer to six feet round up a bit more than usual, stretching for that coveted psychological benchmark.</li>
+</ol>
+
+    </div>
+  </div>
+</div>
+
+  </article>
+  <!-- Presenter Notes -->
+  <aside class="note" id="">
+    <section>
+      <pre><code class="xml">---  &amp;submitcompare2 rows:5
+
+## Submit and Compare (2 Column)
+
+The solid curve represents the distribution of heights of all males in the US. The dotted curve represents the distribution of heights reported by males on OkCupid, an online dating website.
+
+<span class="tag">&lt;<span class="title">img</span> <span class="attribute">class</span>=<span class="value">center</span>
+  <span class="attribute">src</span>=<span class="value">http:</span>//<span class="attribute">cdn.okcimg.com</span>/<span class="attribute">blog</span>/<span class="attribute">lies</span>/<span class="attribute">MaleHeightDistribution.png</span> <span class="attribute">width</span>=<span class="value">400px</span>&gt;</span>
+
+
+*** =question
+
+What is happening here?
+
+*** .explanation
+
+It is easier to interpret things if we overlay a fitted normal distribution for the heights reported by males on OkCupid. Looking at the graph carefully, we can observe two things.
+
+<span class="tag">&lt;<span class="title">img</span> <span class="attribute">class</span>=<span class="value">center</span>
+  <span class="attribute">src</span>=<span class="value">http:</span>//<span class="attribute">cdn.okcimg.com</span>/<span class="attribute">blog</span>/<span class="attribute">lies</span>/<span class="attribute">MaleHeightDistributionYoink.png</span> <span class="attribute">width</span>=<span class="value">400px</span>&gt;</span>
+
+1. Males on OkCupid probably tend to inflate their heights!
+2. You can also see a more subtle vanity at work: starting at roughly 5' 8", the top of the dotted curve tilts even further rightward. This means that guys as they get closer to six feet round up a bit more than usual, stretching for that coveted psychological benchmark.
+</code></pre>
+    </section>
+  </aside>
+</slide>
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id="io2012-ptoc" style="display:none;">
+    <ul>
+      <li>
+      <a href="http://slidify.github.io/iquiz/#" target="_self" rel="tooltip" data-slide="1" data-original-title="Quiz">
+         1
+      </a>
+    </li>
+    <li>
+      <a href="http://slidify.github.io/iquiz/#" target="_self" rel="tooltip" data-slide="2" data-original-title="Radio">
+         2
+      </a>
+    </li>
+    <li>
+      <a href="http://slidify.github.io/iquiz/#" target="_self" rel="tooltip" data-slide="3" data-original-title="Radio (Two Column)">
+         3
+      </a>
+    </li>
+    <li>
+      <a href="http://slidify.github.io/iquiz/#" target="_self" rel="tooltip" data-slide="4" data-original-title="Checkbox">
+         4
+      </a>
+    </li>
+    <li>
+      <a href="http://slidify.github.io/iquiz/#" target="_self" rel="tooltip" data-slide="5" data-original-title="Multi Text">
+         5
+      </a>
+    </li>
+    <li>
+      <a href="http://slidify.github.io/iquiz/#" target="_self" rel="tooltip" data-slide="6" data-original-title="Submit and Compare">
+         6
+      </a>
+    </li>
+    <li>
+      <a href="http://slidify.github.io/iquiz/#" target="_self" rel="tooltip" data-slide="7" data-original-title="Submit and Compare (2 Column)">
+         7
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+
+  <!-- Load Javascripts for Widgets -->
+  <script src="./index_test_files/bootstrap.min.js"></script>
+<script src="./index_test_files/bootbox.min.js"></script>
+<script src="./index_test_files/jquery.quiz.js"></script>
+<script src="./index_test_files/mustache.min.js"></script>
+<script src="./index_test_files/quiz-app.js"></script>
+
+  <!-- MathJax: Fall back to local if CDN offline but local image fonts are not supported (saves >100MB) -->
+  <script type="text/x-mathjax-config;executed=true">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        processEscapes: true
+      }
+    });
+  </script>
+  <script src="./index_test_files/MathJax.js" id=""></script>
+  <!-- <script src="https://c328740.ssl.cf1.rackcdn.com/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script> -->
+  <script>window.MathJax || document.write('<script type="text/x-mathjax-config">MathJax.Hub.Config({"HTML-CSS":{imageFont:null}});<\/script><script src="libraries/widgets/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"><\/script>')
+</script><script type="text/x-mathjax-config;executed=true">MathJax.Hub.Config({"HTML-CSS":{imageFont:null}});</script><script src="./index_test_files/MathJax(1).js"></script>
+<script>  
+  $(function (){ 
+    $("#example").popover(); 
+    $("[rel='tooltip']").tooltip(); 
+  });  
+  </script>  
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="./index_test_files/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  <script src="chrome-extension://gfhlfpnpjokocfohicmfbgjneiipfeil/scripts/pageScript.js"></script><textchecker-popoup-element></textchecker-popoup-element><textchecker-popoup-element></textchecker-popoup-element><div id="MathJax_Font_Test" style="position: absolute; visibility: hidden; top: 0px; left: 0px; width: auto; padding: 0px; border: 0px; margin: 0px; white-space: nowrap; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; font-size: 40px; font-weight: normal; font-style: normal; font-family: STIXSizeOneSym, sans-serif;">ˆ</div></body></html>
